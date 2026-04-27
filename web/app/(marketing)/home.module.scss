@@ -1,0 +1,24 @@
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  max-width: 700px;
+}
+
+/* FIXED */
+.title {
+  font-size: 48px;
+  color: var(--text);
+
+  span {
+    color: var(--primary);
+  }
+}
+
+.desc {
+  color: var(--text-secondary);
+}

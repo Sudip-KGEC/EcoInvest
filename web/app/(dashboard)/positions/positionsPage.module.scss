@@ -1,0 +1,50 @@
+.positions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* FIX */
+.title {
+  color: var(--text);
+}
+
+/* Table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.table th,
+.table td {
+  padding: 14px;
+  text-align: left;
+}
+
+.table th {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary);
+}
+
+.table tr {
+  border-bottom: 1px solid var(--border);
+}
+
+.table tr:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* Profit / Loss */
+.profit {
+  color: #22c55e;
+  font-weight: 500;
+}
+
+.loss {
+  color: #ef4444;
+  font-weight: 500;
+}

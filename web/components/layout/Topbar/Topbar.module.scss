@@ -1,0 +1,29 @@
+.topbar {
+  height: 60px;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 20px;
+}
+
+.left h3 {
+  font-size: 18px;
+  color: var(--text);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.user {
+  background: var(--primary);
+  color: #000;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+}

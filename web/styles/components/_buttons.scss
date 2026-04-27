@@ -1,0 +1,44 @@
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.2s ease;
+
+  border: none;
+}
+
+/* Primary Button */
+.btn-primary {
+  background: var(--primary);
+  color: #000;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+
+  &:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+  }
+}
+
+/* Danger Button */
+.btn-danger {
+  background: #ef4444;
+  color: #fff;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}

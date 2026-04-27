@@ -1,0 +1,54 @@
+.watchlist {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title {
+  color: var(--text);
+}
+
+/* Input box */
+.addBox {
+  display: flex;
+  gap: 10px;
+
+  input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text);
+  }
+
+  button {
+    background: var(--primary);
+    color: #000;
+    padding: 10px 16px;
+    border-radius: 6px;
+  }
+}
+
+/* List */
+.list {
+  list-style: none;
+  padding: 0;
+
+  li {
+    background: var(--card);
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+      background: #ef4444;
+      color: #fff;
+      padding: 6px 10px;
+      border-radius: 4px;
+    }
+  }
+}

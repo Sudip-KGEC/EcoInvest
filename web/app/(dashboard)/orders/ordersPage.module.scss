@@ -1,0 +1,57 @@
+.orders {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title {
+  color: var(--text);
+}
+
+/* Table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+
+  th, td {
+    padding: 14px;
+    text-align: left;
+  }
+
+  th {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-secondary);
+  }
+
+  tr {
+    border-bottom: 1px solid var(--border);
+  }
+
+  tr:hover {
+    background: rgba(255, 255, 255, 0.03);
+  }
+}
+
+/* Order Type */
+.buy {
+  color: #22c55e;
+  font-weight: 500;
+}
+
+.sell {
+  color: #ef4444;
+  font-weight: 500;
+}
+
+/* Status */
+.completed {
+  color: #22c55e;
+}
+
+.pending {
+  color: #f59e0b;
+}
