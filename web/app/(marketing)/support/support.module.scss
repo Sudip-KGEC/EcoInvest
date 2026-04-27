@@ -1,26 +1,136 @@
-.support {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.title {
-  font-size: 36px;
+/* =========================
+   HERO
+========================= */
+.hero {
+  padding: 80px 40px;
+  background: linear-gradient(
+    180deg,
+    var(--bg),
+    rgba(15, 23, 42, 0.6)
+  );
   color: var(--text);
 }
 
-.desc {
-  margin-top: 10px;
-  color: var(--text-secondary);
+/* =========================
+   CONTAINER
+========================= */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.box {
-  margin-top: 30px;
-  background: var(--card);
-  padding: 20px;
+/* =========================
+   TOP BAR
+========================= */
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h4 {
+    font-weight: 600;
+    color: var(--text-secondary);
+  }
+}
+
+.track {
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* =========================
+   GRID
+========================= */
+.grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+}
+
+/* =========================
+   LEFT
+========================= */
+.left {
+  h1 {
+    font-size: 26px;
+    line-height: 1.4;
+  }
+}
+
+/* SEARCH */
+.search {
+  margin-top: 20px;
+  width: 100%;
+  padding: 14px;
   border-radius: 10px;
   border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
 
-  p {
-    margin: 10px 0;
+  &:focus {
+    outline: none;
+    border-color: var(--primary);
+  }
+}
+
+/* QUICK LINKS */
+.quickLinks {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  a {
+    font-size: 14px;
+    color: var(--primary);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* =========================
+   RIGHT
+========================= */
+.right {
+  h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  ol {
+    padding-left: 18px;
+
+    li {
+      margin-bottom: 10px;
+
+      a {
+        color: var(--text-secondary);
+        text-decoration: none;
+
+        &:hover {
+          color: var(--primary);
+        }
+      }
+    }
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .top {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
   }
 }

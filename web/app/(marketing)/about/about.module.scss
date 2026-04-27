@@ -1,14 +1,100 @@
+/* =========================
+   SECTION
+========================= */
 .about {
-  padding: 60px 20px;
+  padding: 100px 40px;
+  background: var(--bg);
+}
+
+/* =========================
+   HEADER
+========================= */
+.header {
+  max-width: 900px;
+  margin: 0 auto 80px;
   text-align: center;
 }
 
+/* Title */
 .title {
-  font-size: 36px;
+  font-size: 34px;
+  font-weight: 700;
   color: var(--text);
+  line-height: 1.4;
+
+  span {
+    display: block;
+    margin-top: 10px;
+    color: var(--primary);
+  }
 }
 
-.desc {
-  margin-top: 20px;
-  color: var(--text-secondary);
+/* =========================
+   CONTENT
+========================= */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  gap: 60px;
+}
+
+/* Columns */
+.column {
+  flex: 1;
+
+  p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+  }
+}
+
+/* =========================
+   LINK
+========================= */
+.link {
+  color: var(--primary);
+  text-decoration: none;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 2px;
+    background: var(--primary);
+    transition: width 0.3s ease;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+/* =========================
+   HOVER EFFECT
+========================= */
+.about:hover .title {
+  color: var(--primary);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 26px;
+  }
 }

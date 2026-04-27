@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
-        
+
         <div className={styles.brand}>
           <h2>EcoInvest</h2>
           <p>Smart investing for everyone.</p>

@@ -1,52 +1,142 @@
+/* =========================
+   FOOTER
+========================= */
 .footer {
-  background: var(--card);
-  padding: 40px;
-  margin-top: 60px;
+  position: relative;
+  padding: 80px 40px 30px;
+  background: var(--bg);
   border-top: 1px solid var(--border);
+  overflow: hidden;
 }
 
+/* 🔥 subtle glow */
+.footer::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    rgba(249, 115, 22, 0.12),
+    transparent 70%
+  );
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: blur(80px);
+  z-index: 0;
+}
+
+/* =========================
+   CONTAINER
+========================= */
 .container {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1200px;
+  margin: 0 auto;
+
   display: flex;
   justify-content: space-between;
+  gap: 60px;
   flex-wrap: wrap;
 }
 
+/* =========================
+   BRAND
+========================= */
 .brand {
+  max-width: 280px;
+
   h2 {
+    font-size: 22px;
+    font-weight: 700;
     color: var(--text);
     margin-bottom: 10px;
+    letter-spacing: -0.3px;
   }
 
   p {
     color: var(--text-secondary);
-    max-width: 250px;
+    font-size: 14px;
+    line-height: 1.6;
   }
 }
 
+/* =========================
+   LINKS
+========================= */
 .links {
   display: flex;
   gap: 60px;
+}
 
-  h4 {
-    margin-bottom: 10px;
-    color: var(--text);
+.links div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Section titles */
+.links h4 {
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* Links */
+.links a {
+  position: relative;
+  font-size: 14px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition: 0.3s;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 2px;
+    background: var(--primary);
+    transition: width 0.3s ease;
   }
 
-  a {
-    display: block;
-    color: var(--text-secondary);
-    text-decoration: none;
-    margin-bottom: 6px;
+  &:hover {
+    color: var(--primary);
+  }
 
-    &:hover {
-      color: var(--primary);
-    }
+  &:hover::after {
+    width: 100%;
   }
 }
 
+/* =========================
+   BOTTOM
+========================= */
 .bottom {
-  margin-top: 30px;
+  margin-top: 50px;
   text-align: center;
-  font-size: 14px;
+  font-size: 13px;
   color: var(--text-secondary);
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .links {
+    gap: 40px;
+  }
 }

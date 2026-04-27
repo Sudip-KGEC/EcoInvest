@@ -1,0 +1,104 @@
+/* =========================
+   SECTION
+========================= */
+.brokerage {
+  padding: 80px 40px;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* =========================
+   LEFT
+========================= */
+.left {
+  flex: 2;
+}
+
+/* Heading link */
+.headingLink {
+  text-decoration: none;
+
+  h3 {
+    font-size: 18px;
+    color: var(--primary);
+    margin-bottom: 20px;
+  }
+}
+
+/* List */
+.list {
+  list-style: none;
+  padding: 0;
+
+  li {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 18px;
+
+    &::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+    }
+  }
+}
+
+/* =========================
+   RIGHT
+========================= */
+.right {
+  flex: 1;
+}
+
+/* Card */
+.card {
+  display: block;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+
+  h4 {
+    font-size: 16px;
+    color: var(--text);
+  }
+
+  p {
+    margin-top: 8px;
+    font-size: 13px;
+    color: var(--text-secondary);
+  }
+
+  &:hover {
+    border-color: var(--primary);
+    transform: translateY(-4px);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+}

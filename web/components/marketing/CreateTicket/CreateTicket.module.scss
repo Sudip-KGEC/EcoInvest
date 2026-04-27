@@ -1,0 +1,99 @@
+/* =========================
+   SECTION
+========================= */
+.ticket {
+  padding: 100px 40px;
+  background: var(--bg);
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* =========================
+   TITLE
+========================= */
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text);
+  text-align: center;
+}
+
+/* =========================
+   GRID
+========================= */
+.grid {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* =========================
+   CARD
+========================= */
+.card {
+  padding: 20px;
+  border-radius: 12px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  transition: 0.3s;
+
+  &:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+  }
+
+  h4 {
+    font-size: 16px;
+    color: var(--text);
+    margin-bottom: 10px;
+  }
+}
+
+/* ICON */
+.icon {
+  color: var(--primary);
+  margin-right: 6px;
+}
+
+/* LINKS */
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  a {
+    font-size: 14px;
+    color: var(--text-secondary);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--primary);
+    }
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+}

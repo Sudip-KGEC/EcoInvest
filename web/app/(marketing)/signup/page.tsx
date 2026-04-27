@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import styles from "./signup.module.scss";
 
 export default function SignupPage() {
@@ -8,15 +9,13 @@ export default function SignupPage() {
 
   const handleSignup = (e: React.FormEvent) => {
     e.preventDefault();
-
     localStorage.setItem("token", "user123");
     router.push("/dashboard");
   };
 
   return (
-    <div className={styles.signup}>
-      <div className={styles.container}>
-        
+    <div className={styles.auth}>
+      <div className={styles.card}>
         <h1 className={styles.title}>Create Account</h1>
 
         <form onSubmit={handleSignup} className={styles.form}>
@@ -29,6 +28,9 @@ export default function SignupPage() {
           </button>
         </form>
 
+        <p className={styles.switch}>
+          Already have an account? <Link href="/login">Login</Link>
+        </p>
       </div>
     </div>
   );

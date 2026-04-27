@@ -1,25 +1,26 @@
-/* COLORS */
-$primary: #00c896;
-$secondary: #2563eb;
-$accent: #22d3ee;
+:root {
+  /* 🔥 Brand Colors */
+  --primary: #f97316;        // orange
+  --primary-light: #fb923c;
+  --primary-dark: #ea580c;
 
-/* BACKGROUND */
-$bg-dark: #0f172a;
-$bg-card: #1e293b;
+  /* 🌙 Backgrounds */
+  --bg-main: #020617;
+  --bg-secondary: #0f172a;
+  --bg-card: #111827;
 
-/* TEXT */
-$text-primary: #e2e8f0;
-$text-secondary: #94a3b8;
+  /* 🧾 Text */
+  --text-main: #ffffff;
+  --text-secondary: #cbd5f5;
+  --text-muted: #94a3b8;
 
-/* STATUS */
-$success: #22c55e;
-$danger: #ef4444;
-$warning: #f59e0b;
+  /* 🧊 Borders */
+  --border: #334155;
 
-/* SPACING */
-$space-sm: 8px;
-$space-md: 16px;
-$space-lg: 24px;
+  /* ✨ Effects */
+  --shadow-primary: 0 10px 30px rgba(249, 115, 22, 0.4);
+  --shadow-hover: 0 20px 50px rgba(249, 115, 22, 0.6);
 
-/* BORDER */
-$radius: 10px;
+  /* 🌫 Overlay */
+  --overlay: rgba(2, 6, 23, 0.75);
+}

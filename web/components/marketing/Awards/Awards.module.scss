@@ -1,0 +1,185 @@
+/* =========================
+   SECTION
+========================= */
+.awards {
+  padding: 80px 40px;
+  background: var(--bg);
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* =========================
+   LEFT (IMAGE)
+========================= */
+/* 🖼 Image Wrapper */
+.left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* 🖼 Image Wrapper */
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: 320px;
+}
+
+/* Image */
+.image {
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* Hover */
+.imageWrapper:hover .image {
+  transform: scale(1.04);
+}
+/* =========================
+   RIGHT CONTENT
+========================= */
+.right {
+  flex: 1;
+  max-width: 520px;
+}
+
+/* =========================
+   TITLE
+========================= */
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+/* =========================
+   SUBTITLE
+========================= */
+.subtitle {
+  margin-top: 16px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+/* =========================
+   FEATURES
+========================= */
+.features {
+  margin-top: 24px;
+  display: flex;
+  gap: 40px;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      font-size: 14px;
+      color: var(--text);
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 18px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 7px;
+
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+
+        background: var(--primary);
+      }
+    }
+  }
+}
+
+/* =========================
+   LOGOS
+========================= */
+.logos {
+  margin-top: 30px;
+
+  :global(img) {
+    width: 100%;
+    height: auto;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover :global(img) {
+    opacity: 1;
+  }
+}
+
+/* =========================
+   HOVER EFFECT
+========================= */
+.container:hover .title {
+  color: var(--primary);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+  .container {
+    gap: 40px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .right {
+    max-width: 100%;
+  }
+
+  .features {
+    justify-content: center;
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .awards {
+    padding: 60px 20px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .features {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

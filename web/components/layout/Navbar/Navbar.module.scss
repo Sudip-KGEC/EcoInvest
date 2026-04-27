@@ -10,16 +10,26 @@
   border-bottom: 1px solid var(--border);
 }
 
+/* Logo */
 .logo {
   font-size: 22px;
   font-weight: 600;
   color: var(--text);
+  text-decoration: none;
 
   span {
     color: var(--primary);
   }
 }
 
+/* Right Container */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Links */
 .links {
   display: flex;
   gap: 25px;
@@ -36,17 +46,39 @@
   }
 }
 
+/* Actions */
 .actions {
-  .signup {
-    padding: 8px 16px;
-    background: var(--primary);
-    color: #000;
-    border-radius: 6px;
-    font-weight: 500;
-    text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
 
-    &:hover {
-      opacity: 0.9;
-    }
+/* Theme Toggle */
+.themeToggle {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+
+  padding: 6px 10px;
+  cursor: pointer;
+
+  font-size: 14px;
+
+  &:hover {
+    border-color: var(--primary);
+  }
+}
+
+/* Signup Button */
+.signup {
+  padding: 8px 16px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 500;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.9;
   }
 }

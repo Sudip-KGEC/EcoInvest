@@ -1,59 +1,94 @@
-.signup {
-  min-height: 80vh;
+/* =========================
+   PAGE
+========================= */
+.auth {
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background: var(--bg);
-  padding: 40px 20px;
+  padding: 20px;
 }
 
-/* Form Container */
-.container {
+/* =========================
+   CARD
+========================= */
+.card {
   width: 100%;
-  max-width: 350px;
-  background: var(--card);
+  max-width: 360px;
   padding: 30px;
-  border-radius: 10px;
+
+  background: var(--card);
   border: 1px solid var(--border);
-}
+  border-radius: 12px;
 
-/* Title */
-.title {
-  font-size: 26px;
-  margin-bottom: 20px;
   text-align: center;
-  color: var(--text);
 }
 
-/* Form */
+/* =========================
+   TITLE
+========================= */
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+
+/* =========================
+   FORM
+========================= */
 .form {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-/* Input */
+/* INPUT */
 .input {
-  padding: 10px;
-  border-radius: 6px;
+  padding: 12px;
+  border-radius: 8px;
   border: 1px solid var(--border);
   background: var(--bg);
   color: var(--text);
-  font-size: 14px;
+
+  &:focus {
+    outline: none;
+    border-color: var(--primary);
+  }
 }
 
-/* Button */
+/* BUTTON */
 .button {
   margin-top: 10px;
-  padding: 10px;
-  border-radius: 6px;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+
   background: var(--primary);
-  color: #000;
-  font-weight: 500;
+  color: white;
+  font-weight: 600;
   cursor: pointer;
+
   transition: 0.2s;
+
+  &:hover {
+    opacity: 0.9;
+  }
 }
 
-.button:hover {
-  opacity: 0.9;
+/* SWITCH LINK */
+.switch {
+  margin-top: 16px;
+  font-size: 14px;
+  color: var(--text-secondary);
+
+  a {
+    color: var(--primary);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
